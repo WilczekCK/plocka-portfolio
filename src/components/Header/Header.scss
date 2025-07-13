@@ -1,0 +1,44 @@
+header{
+    width:100%;
+    background:#1B1B1B;
+
+    .header--wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+        max-width:1420px;
+
+        height:82px;
+        padding: 0 45px;
+        margin:0 auto;
+
+        nav {
+            flex-grow:2;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap:75px;
+                width: 100%;
+                
+                list-style: none;
+        
+                li { 
+                    &:first-of-type{
+                        margin-left:-40px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color:#ffff;
+        
+                        font-weight: 500;
+                        font-style: normal;
+                        font-size:20px;
+                    }
+                }
+            }
+        }
+    }
+}
