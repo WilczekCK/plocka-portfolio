@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = () => {
           </ul>
         </nav>
 
-        <a className={"btn btn-white"} href="tel:884935095">
+        <a className={"btn btn--white"} href="tel:884935095">
           884 935 095
         </a>
       </div>

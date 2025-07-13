@@ -35,7 +35,7 @@ main {
         transition: $plo-text-transition;
     }
 
-    &-white {
+    &--white {
         background: $plo-white;
         color: $plo-purple;
 
@@ -45,7 +45,7 @@ main {
         }
     }
 
-    &-purple {
+    &--purple {
         background-color: $plo-purple;
         color: $plo-white;
 
