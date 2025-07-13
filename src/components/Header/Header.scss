@@ -4,6 +4,7 @@ header{
     width:100%;
     background:#1B1B1B;
 
+    // Desktop
     .header--wrapper {
         display: flex;
         flex-direction: row;
@@ -15,16 +16,29 @@ header{
         padding: 0 45px;
         margin:0 auto;
 
-        nav {
+        .header--cta {
+            @media (max-width: $plo-tablet) {
+                font-size:16px;
+            }
+        }
+
+        .header__menu {
             flex-grow:2;
+
+            @media (max-width: $plo-mobile) {
+                display: none;
+            }
 
             ul {
                 display: flex;
                 flex-direction: row;
                 gap:75px;
                 width: 100%;
-                
                 list-style: none;
+
+                @media (max-width: $plo-tablet) {
+                    gap: 36px;
+                }
         
                 li { 
                     &:first-of-type{
@@ -41,6 +55,10 @@ header{
                         font-style: normal;
                         font-size:20px;
 
+                        @media (max-width: $plo-tablet) {
+                            font-size:16px;
+                        }
+
                         text-decoration: none;
                         color:$plo-white;
                     }
@@ -49,6 +67,79 @@ header{
                         color:$plo-purple;
                     }
                 }
+            }
+        }
+    }
+}
+
+
+
+// Tablet
+@media (min-width: $plo-mobile) {
+    header{
+        .header__hamburger{
+            display: none;
+        }
+    }
+}
+
+// Mobile
+@media (max-width: $plo-mobile) {
+    header {
+        flex-direction: column !important;
+        position: relative;
+
+        .header--cta{ display: none;}
+        .header__hamburger{ 
+            display: flex;
+
+            svg {
+                width: 24px;
+                height: 24px;
+
+                &:hover {
+                    path {
+                        fill: $plo-purple;
+                    }
+                }
+
+                path {
+                    transition: $plo-text-transition;
+                }
+            }
+        }
+
+        .header__hamburger--active{
+            flex-direction: column !important;
+            
+            path {
+                fill: $plo-purple;
+            }
+
+            .header__menu {
+                position:absolute;
+                top:80px;
+                width: 100%;
+
+                background: $plo-container-bg;
+
+                ul {
+                    flex-direction: column;
+
+                    li {margin: unset !important;}
+                }
+            }
+        }
+
+        .header--wrapper {
+            .header__menu {
+                opacity:0;
+                transition: $plo-text-transition;
+            }
+
+            .header__menu--active {
+                opacity: 1;
+                display: flex;
             }
         }
     }

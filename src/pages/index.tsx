@@ -5,12 +5,15 @@ import "../components/layout.scss"
 import 'normalize.css';
 
 import Header from "../components/Header/Header"
+import Hero from "../components/Hero/Hero"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
       <Header />
-      <main></main>
+      <main>
+        <Hero />
+      </main>
     </>
   )
 }

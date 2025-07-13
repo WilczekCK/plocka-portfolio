@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Header.scss";
+import HamburgerIcon from '../../assets/icons/hamburger.svg';
 
 interface HeaderProps {
   highlighted?: "hero" | "o-mnie" | "oferta" | "portfolio" | "kontakt" | "blog";
@@ -12,11 +13,16 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = () => {
   const [highlighted, setHighlighted] = useState<HeaderProps["highlighted"]>("hero");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <header>
-      <div className={"header--wrapper"}>
-        <nav>
+      <div className={`header--wrapper ${isMobileMenuOpen ? "header__hamburger--active" : ""}`}>
+        <div className={`header__hamburger ${isMobileMenuOpen ? "header__hamburger--active" : ""}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            <HamburgerIcon />
+        </div>
+
+        <nav className={`header__menu ${isMobileMenuOpen ? "header__menu--active" : ""}`}>
           <ul>
             {
                 ['o-mnie', 'oferta', 'portfolio', 'kontakt', 'blog'].map((item) => (
@@ -36,7 +42,7 @@ const Header: React.FC<HeaderProps> = () => {
           </ul>
         </nav>
 
-        <a className={"btn btn--white"} href="tel:884935095">
+        <a className={"btn btn--white header--cta"} href="tel:884935095">
           884 935 095
         </a>
       </div>

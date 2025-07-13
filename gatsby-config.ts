@@ -33,6 +33,13 @@ const config: GatsbyConfig = {
     options: {
       trackingIds: ['GTM-T772B6P9']
     },
+  }, {
+    resolve: "gatsby-plugin-react-svg",
+    options: {
+      rule: {
+        include: /src\/assets/
+      }
+    }
   }]
 };
 

@@ -1,14 +1,16 @@
 @import "variables.scss";
 
 html {
-    background: #101010;
-    color:#ffff;
+    background: $plo-black;
+    color: $plo-white;
     font-family: "Goldman", sans-serif;
 }
 
 main {
     max-width: 1440px;
 }
+
+.active {display: flex;}
 
 // Buttons
 .btn {
