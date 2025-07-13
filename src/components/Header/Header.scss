@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 header{
     width:100%;
     background:#1B1B1B;
@@ -30,12 +32,21 @@ header{
                     }
 
                     a {
-                        text-decoration: none;
-                        color:#ffff;
-        
+                        transition: $plo-text-transition;
+                        &:hover {
+                            color:$plo-purple;
+                        }
+
                         font-weight: 500;
                         font-style: normal;
                         font-size:20px;
+
+                        text-decoration: none;
+                        color:$plo-white;
+                    }
+
+                    a.active {
+                        color:$plo-purple;
                     }
                 }
             }
