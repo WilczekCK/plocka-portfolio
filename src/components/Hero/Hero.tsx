@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Hero.scss";
-import HeroImage from '../../images/home-section-1.webp';
+import { StaticImage } from "gatsby-plugin-image";
 
 const Hero: React.FC<BodyProps> = () => {
   return (
@@ -25,7 +25,13 @@ const Hero: React.FC<BodyProps> = () => {
         </div>
       </div>
       <div className={"hero__container__right"}>
-        <img src={HeroImage} alt="Natalia Płocka" className={"hero__container__right--image"} />
+        <StaticImage
+          src="../../images/home-section-1.webp"
+          alt="Hero section"
+          loading="lazy"
+          placeholder="blurred"
+          layout="constrained"
+        />
       </div>
     </div>
   );
