@@ -9,6 +9,9 @@
     margin:50px 0px 0px 0px;
     padding:0px 45px;
 
+    @media (max-width: $plo-mobile) {
+        padding-bottom: unset !important;
+    }
 
     background-color: $plo-container-bg;
     border-radius:18px;
@@ -41,6 +44,18 @@
         @media (max-width: $plo-tablet) {
             padding:0px;
             margin: 0px;
+            max-width:unset;
+
+            .btn {
+                width: calc(50% - 50px);
+            }
+        }
+
+
+        @media (max-width: $plo-mobile) {
+            .btn {
+                width: 100%;
+            }
         }
 
         &--header {
