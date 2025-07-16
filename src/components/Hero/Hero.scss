@@ -3,27 +3,28 @@
 .hero__container {
     display: flex;
     flex-direction: row;
-    padding:0px 100px;
+    justify-content: center;
+
     gap: 20px;
-    margin:50px 20px 0px 20px;
+    margin:50px 0px 0px 0px;
+    padding:0px 45px;
+
 
     background-color: $plo-container-bg;
     border-radius:18px;
 
     @media (min-width: $plo-tablet) {
-        min-height: 500px;;
+        min-height: 500px;
     }
 
     @media (max-width: $plo-tablet) {
         flex-direction: column;
-        padding: 50px 50px 0px;
+        padding: 50px 30px 0px;
         gap:50px;
-        margin:25px 0px;
     }
 
     @media (max-width: $plo-mobile) {
-        padding: 25px 30px 0px;
-        margin:20px 0px;
+        padding:30px;
         gap:70px;
     }
 
@@ -33,6 +34,7 @@
         justify-content: center;
         flex-grow:2;
         gap:30px;
+        max-width:610px;
 
         padding:25px 0px;
 

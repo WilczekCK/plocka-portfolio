@@ -12,7 +12,9 @@ const IndexPage: React.FC<PageProps> = () => {
     <>
       <Header />
       <main>
-        <Hero />
+        <div class="main__wrapper">
+          <Hero />
+        </div>
       </main>
     </>
   )
