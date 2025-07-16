@@ -7,7 +7,20 @@ html {
 }
 
 main {
+    display:flex;
+    flex-direction: column;
+    gap: 100px;
+
     max-width: 1440px;
+    margin:0 auto;
+
+    @media (max-width: $plo-tablet) {
+        padding: 0px 30px;
+    }
+
+    @media (max-width: $plo-mobile) {
+        padding: 0px 15px;
+    }
 }
 
 .active {display: flex;}
@@ -30,6 +43,11 @@ main {
 
     background-color: $plo-gray;
     color:$plo-white;
+    cursor: pointer;
+
+    @media (max-width: $plo-mobile) {
+        width: 100%;   
+    }
 
     &:hover {
         background-color: $plo-purple;

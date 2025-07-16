@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = () => {
         <nav className={`header__menu ${isMobileMenuOpen ? "header__menu--active" : ""}`}>
           <ul>
             {
-                ['o-mnie', 'oferta', 'portfolio', 'kontakt', 'blog'].map((item) => (
+                ['o-mnie', 'oferta', 'portfolio', 'kontakt'].map((item) => (
                   <li key={item}>
                     <a
                       href={`#${item}`}

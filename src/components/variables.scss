@@ -1,11 +1,16 @@
 $plo-purple: #5A4FF5;
 $plo-white: #ffffff;
 $plo-gray: #545454;
+$plo-light-gray: #868686;
 $plo-black: #000000;
 
 $plo-container-bg: #1B1B1B;
 
 $plo-tablet: '1100px';
 $plo-mobile: '768px';
+
+$plo-tablet-padding-w: '50px';
+$plo-mobile-padding-w: '25px';
+
 
 $plo-text-transition: color 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), font-size 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), background 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
