@@ -2,30 +2,55 @@
 
 .section__wrapper {
     margin-top: 90px;
-    
+
+
     > h2 ~ div {
         display: flex;
         flex-direction: column;
-        gap:50px;    
+        gap:40px;
     }
 
     > span ~ * {
         padding:0px 120px;
+
+        @media (max-width: $plo-tablet) {
+            padding:0px 53px;
+        }
     }
 
     > span {
         font-weight: bold;
         font-size:120px;
         color: $plo-container-bg;
+        text-transform: uppercase;
+
+        @media (max-width: $plo-tablet) {
+            font-size:100px;
+        }
     }
 
     > h2 {
         font-weight:bold;
         font-size:54px;
-        margin-top:-30px;
+        margin-top:-35px;
+
+        @media (max-width: $plo-tablet) {
+            font-size:48px;
+        }
 
         span {
             color: $plo-purple;
+        }
+    }
+
+    p {
+        font-size:20px;
+        color: $plo-white;
+        line-height: 28px;
+        margin: 0px;
+
+        @media (max-width: $plo-tablet) {
+            font-size:16px;
         }
     }
 }

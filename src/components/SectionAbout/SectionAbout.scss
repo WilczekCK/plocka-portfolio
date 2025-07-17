@@ -1,0 +1,41 @@
+@import "../variables.scss";
+
+.certificates__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+
+    padding:50px 0px;
+
+    @media (max-width: $plo-tablet) {
+        padding: 0px;
+    }
+
+    &__swiper__btn {
+        &:nth-of-type(2) {
+            order:2;
+        }
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top:2px;
+        height:36px;
+        width: 36px;
+
+        background: $plo-purple;
+        border-radius:8px;
+        
+        user-select: none;
+        cursor: pointer;
+        font-size:28px;
+
+        &:hover{
+            background:$plo-white;
+            color:$plo-purple;
+
+            transition: $plo-text-transition;
+        }
+    }
+}

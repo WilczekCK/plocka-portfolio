@@ -27,7 +27,7 @@ const Hero: React.FC<BodyProps> = () => {
       <div className={"hero__container__right"}>
         <StaticImage
           src="../../images/home-section-1.webp"
-          alt="Hero section"
+          alt="Hero image"
           loading="lazy"
           placeholder="blurred"
           layout="constrained"
