@@ -26,16 +26,16 @@
 
         background: $plo-purple;
         border-radius:8px;
-        
+
         user-select: none;
         cursor: pointer;
         font-size:28px;
 
+        transition: $plo-text-transition;
+
         &:hover{
             background:$plo-white;
             color:$plo-purple;
-
-            transition: $plo-text-transition;
         }
     }
 }

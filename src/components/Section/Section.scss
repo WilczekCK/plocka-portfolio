@@ -3,6 +3,9 @@
 .section__wrapper {
     margin-top: 90px;
 
+    @media (max-width: $plo-mobile) {
+        margin-top: 45px;
+    }
 
     > h2 ~ div {
         display: flex;
@@ -15,6 +18,10 @@
 
         @media (max-width: $plo-tablet) {
             padding:0px 53px;
+        }   
+
+        @media (max-width: $plo-mobile) {
+            padding:0px 30px;
         }
     }
 
@@ -27,6 +34,11 @@
         @media (max-width: $plo-tablet) {
             font-size:100px;
         }
+
+        @media (max-width: $plo-mobile) {
+            font-size:42px;
+            padding:0px 30px;
+        }
     }
 
     > h2 {
@@ -36,6 +48,11 @@
 
         @media (max-width: $plo-tablet) {
             font-size:48px;
+        }
+
+        @media (max-width: $plo-mobile) {
+            font-size:32px;
+            margin-top:0px;
         }
 
         span {

@@ -34,6 +34,14 @@ const IndexPage: React.FC<PageProps> = () => {
             >
               <SectionOffer />
           </Section>
+
+
+          <Section 
+            heading={<><span>Portfolio |</span> Design w praktyce</>}
+            subheading="Portfolio"
+            anchor="portfolio"
+            >
+          </Section>
         </div>
       </main>
     </>
