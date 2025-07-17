@@ -9,6 +9,7 @@ import Hero from "../components/Hero/Hero"
 import Section from "../components/Section/Section";
 
 import SectionAbout from "../components/SectionAbout/SectionAbout"
+import SectionOffer from "../components/SectionOffer/SectionOffer";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -24,6 +25,14 @@ const IndexPage: React.FC<PageProps> = () => {
             anchor="o-mnie"
             >
               <SectionAbout />
+          </Section>
+
+          <Section 
+            heading={<><span>Moja oferta |</span> Co mogę wykonać?</>}
+            subheading="Oferta"
+            anchor="oferta"
+            >
+              <SectionOffer />
           </Section>
         </div>
       </main>

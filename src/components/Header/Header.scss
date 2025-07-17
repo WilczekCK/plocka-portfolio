@@ -10,12 +10,10 @@ header{
         flex-direction: row;
         justify-content: center;
         align-items:center;
-        max-width:1275px;
+        max-width:1300px;
 
         margin:0 auto;
         padding:0px 45px;
-    
-
     
         @media (max-width: $plo-mobile) {
             padding:0px 15px;
