@@ -1,0 +1,37 @@
+@import "../variables.scss";
+
+.section__portfolio {
+    display: flex;
+    gap:20px;
+    position:relative;
+
+    &__scroll {
+        position: absolute;
+        left:200px;
+        height:100%;
+        content:'';
+        background:$plo-gray;
+        color:$plo-purple;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+
+        &__project {
+            display: flex;
+            flex-direction: row !important;
+            gap:70px;
+            align-items: flex-start;
+            position: sticky;
+
+            &__name {
+                font-size:36px;
+                font-weight:bold;
+                position: sticky;
+                top: 20px;
+              }
+        }
+    }
+}

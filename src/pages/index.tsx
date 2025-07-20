@@ -10,6 +10,7 @@ import Section from "../components/Section/Section";
 
 import SectionAbout from "../components/SectionAbout/SectionAbout"
 import SectionOffer from "../components/SectionOffer/SectionOffer";
+import SectionPortfolio from "../components/SectionPortfolio/SectionPortfolio";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -41,6 +42,7 @@ const IndexPage: React.FC<PageProps> = () => {
             subheading="Portfolio"
             anchor="portfolio"
             >
+              <SectionPortfolio />
           </Section>
         </div>
       </main>
