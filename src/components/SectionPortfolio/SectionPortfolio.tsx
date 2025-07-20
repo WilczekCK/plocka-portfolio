@@ -26,7 +26,7 @@ const SectionPortfolio = ({heading, subheading, link, children}) => {
         {link && (<><a href={link} target="_blank" className="btn" style={{width:"max-content"}}>wyświetl stronę</a></>)} 
       </div>
 
-      <div className="section__portfolio__scroll" ref={sectionRef}>
+      <div className="section__portfolio__scroll" ref={sectionRef}>  
         <motion.div 
             className={`section__portfolio__scroll--dot`}
             style={{
@@ -44,6 +44,13 @@ const SectionPortfolio = ({heading, subheading, link, children}) => {
       </div>
 
       <div className="section__portfolio__content__project__description">
+        <div className="section__portfolio__content__project__description__name">
+          <span>{heading}</span>
+          <p>{subheading}</p>
+
+          {link && (<><a href={link} target="_blank" className="btn" style={{width:"max-content"}}>wyświetl stronę</a></>)} 
+        </div>
+
           {children}
       </div>
     </div>
