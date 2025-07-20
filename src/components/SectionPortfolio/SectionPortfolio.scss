@@ -52,8 +52,21 @@
                 position: sticky;
                 top: 20px;
 
+                display: flex;
+                flex-direction: column;
+                gap:15px;
+
                 max-width: 400px;
                 min-width: 400px;
+
+                p {
+                    font-size:24px;
+                    color:$plo-portfolio-text-color;
+                }
+                
+                .btn {
+                    margin-top:10px;
+                }
             }
 
             &__description {

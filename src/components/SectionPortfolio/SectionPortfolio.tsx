@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform, useMotionValue, useSpring } from "fram
 
 import "./SectionPortfolio.scss";
 
-const SectionPortfolio = ({heading, children}) => {
+const SectionPortfolio = ({heading, subheading, link, children}) => {
   const sectionRef = React.useRef<HTMLDivElement>(null);
   
   const { scrollYProgress } = useScroll({ target: sectionRef,});
@@ -19,7 +19,12 @@ const SectionPortfolio = ({heading, children}) => {
 
   return (
     <div className="section__portfolio__content__project">
-      <div className="section__portfolio__content__project__name">{heading}</div>
+      <div className="section__portfolio__content__project__name">
+        <span>{heading}</span>
+        <p>{subheading}</p>
+
+        {link && (<><a href={link} target="_blank" className="btn" style={{width:"max-content"}}>wyświetl stronę</a></>)} 
+      </div>
 
       <div className="section__portfolio__scroll" ref={sectionRef}>
         <motion.div 

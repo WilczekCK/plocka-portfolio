@@ -14,6 +14,14 @@ import SectionPortfolio from "../components/SectionPortfolio/SectionPortfolio";
 
 import PortfolioPathPro from "../components/SectionPortfolio/Portfolios/PortfolioPathPro";
 import PortfolioMarcysiak from "../components/SectionPortfolio/Portfolios/PortfolioMarcysiak";
+import PortfolioPrefa from "../components/SectionPortfolio/Portfolios/PortfolioPrefa";
+import PortfolioArbiter from "../components/SectionPortfolio/Portfolios/PortfolioArbiter";
+import PortfolioMoriar from "../components/SectionPortfolio/Portfolios/PortfolioMoriar";
+import PortfolioProres from "../components/SectionPortfolio/Portfolios/PortfolioProres";
+import PortfolioToiletki from "../components/SectionPortfolio/Portfolios/PortfolioToiletki";
+import PortfolioKikeco from "../components/SectionPortfolio/Portfolios/PortfolioKikeco";
+import PortfolioHss from "../components/SectionPortfolio/Portfolios/PortfolioHss";
+import PortfolioMobile from "../components/SectionPortfolio/Portfolios/PortfolioMobile";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -39,7 +47,6 @@ const IndexPage: React.FC<PageProps> = () => {
               <SectionOffer />
           </Section>
 
-
           <Section 
             heading={<><span>Portfolio |</span> Design w praktyce</>}
             subheading="Portfolio"
@@ -49,12 +56,71 @@ const IndexPage: React.FC<PageProps> = () => {
                 <div className="section__portfolio__content" >
                   <SectionPortfolio
                     heading={<>PathPro</>}
+                    subheading="identyfikacja wizualna firmy"
                     children={<PortfolioPathPro />}
                   />
 
                   <SectionPortfolio
                     heading={<>Paweł Marcysiak - Ekspert finansowy</>}
+                    subheading="projekt strony + social media"
                     children={<PortfolioMarcysiak />}
+                    link={"https://marcysiak.eu"}
+                  />
+
+                  <SectionPortfolio
+                    heading={<>PrefaHolding - Prefabrykaty żelbetowe</>}
+                    subheading="projekt strony + social media"
+                    children={<PortfolioPrefa />}
+                  />
+
+                  <SectionPortfolio
+                    heading={<>Arbiter Stylu - Kate Ryhter Kasińska</>}
+                    subheading="projekt strony + logo"
+                    children={<PortfolioArbiter />}
+                    link={"https://arbiterstylu.pl/"}
+                  />
+
+                  <SectionPortfolio
+                    heading={<>Moriar Tables - sklep ze stołami i akcesoriami do gier planszowych</>}
+                    subheading="projekt strony"
+                    children={<PortfolioMoriar />}
+                    link={"https://moriartables.pl/"}
+                  />
+
+                  <SectionPortfolio
+                    heading={<>Prores - Firma konsultingowa</>}
+                    subheading="projekt strony + logo"
+                    children={<PortfolioProres />}
+                    link={"https://prores.biz/"}
+                  />
+
+                  <SectionPortfolio
+                    heading={<>Toiletki</>}
+                    subheading="projekt sklepu internetowego"
+                    children={<PortfolioToiletki />}
+                    link={"https://toiletki.pl/"}
+                  />
+
+                  <SectionPortfolio
+                    heading={<>Kik Eco Lab</>}
+                    subheading="projekt strony"
+                    children={<PortfolioKikeco />}
+                    link={"https://kikecolab.pl/"}
+                  />
+
+                  <SectionPortfolio
+                    heading={<>HS Studio</>}
+                    subheading="Projekt rozbudowanej strony internetowej dot. nieruchomości wraz ze sklepem internetowym"
+                    children={<PortfolioHss />}
+                    link={"https://www.hsstudiosek.pl/"}
+                  />
+
+                  <SectionPortfolio
+                    heading={<>Projekty aplikacji mobilnych</>}
+                    subheading="UI/UX dla aplikacji mobilnych – prognoza pogody i zamówienia online"
+                    children={<PortfolioMobile />}
+                    linkProto={"#"}
+                    linkProto2={"#"}
                   />
                 </div>
               </div>
