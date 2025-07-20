@@ -12,6 +12,8 @@ import SectionAbout from "../components/SectionAbout/SectionAbout"
 import SectionOffer from "../components/SectionOffer/SectionOffer";
 import SectionPortfolio from "../components/SectionPortfolio/SectionPortfolio";
 
+import PortfolioPathPro from "../components/SectionPortfolio/Portfolios/PortfolioPathPro";
+
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
@@ -42,7 +44,14 @@ const IndexPage: React.FC<PageProps> = () => {
             subheading="Portfolio"
             anchor="portfolio"
             >
-              <SectionPortfolio />
+              <div className="section__portfolio">
+                <div className="section__portfolio__content" >
+                  <SectionPortfolio
+                    heading={<>PathPro</>}
+                    children={<PortfolioPathPro />}
+                  />
+                </div>
+              </div>
           </Section>
         </div>
       </main>

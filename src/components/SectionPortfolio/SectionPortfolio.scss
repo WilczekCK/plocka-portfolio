@@ -10,11 +10,12 @@
         background:$plo-gray;
         color:#616161;
 
-        z-index: 10;
+        z-index: 0;
         height: 100%;
         margin-top:3px;
         position: relative; 
         
+
         &--dot {
             width:14px;
             height: 14px;
@@ -23,10 +24,6 @@
             z-index: 9999;
             border-radius:14px;
             left:-6px;
-
-            &--active {
-                background-color: $plo-white;
-            }
         }
 
         &--highlight {
