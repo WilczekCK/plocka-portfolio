@@ -13,6 +13,7 @@ import SectionOffer from "../components/SectionOffer/SectionOffer";
 import SectionPortfolio from "../components/SectionPortfolio/SectionPortfolio";
 
 import PortfolioPathPro from "../components/SectionPortfolio/Portfolios/PortfolioPathPro";
+import PortfolioMarcysiak from "../components/SectionPortfolio/Portfolios/PortfolioMarcysiak";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -49,6 +50,11 @@ const IndexPage: React.FC<PageProps> = () => {
                   <SectionPortfolio
                     heading={<>PathPro</>}
                     children={<PortfolioPathPro />}
+                  />
+
+                  <SectionPortfolio
+                    heading={<>Paweł Marcysiak - Ekspert finansowy</>}
+                    children={<PortfolioMarcysiak />}
                   />
                 </div>
               </div>

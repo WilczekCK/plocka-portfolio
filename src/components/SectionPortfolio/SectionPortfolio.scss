@@ -41,15 +41,19 @@
         &__project {
             display: flex;
             flex-direction: row !important;
-            gap:70px;
+            gap:35px;
             align-items: flex-start;
             position: sticky;
 
             &__name {
-                font-size:36px;
+                font-size:40px;
+                color:$plo-portfolio-text-color;
                 font-weight:bold;
                 position: sticky;
                 top: 20px;
+
+                max-width: 400px;
+                min-width: 400px;
             }
 
             &__description {
@@ -57,6 +61,9 @@
                 flex-direction: column;
                 gap:28px;
                 padding-bottom:100px;
+                padding-left:20px;
+                font-size:20px;
+                color:$plo-white;
             }
         }
     }
