@@ -2,3 +2,5 @@ node_modules/
 .cache/
 public
 src/gatsby-types.d.ts
+src/components/BlobContainer/BlobContainer.scss
+src/components/BlobContainer/BlobContainer.tsx

@@ -30,6 +30,7 @@
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-spring": "^10.0.1",
     "sass": "^1.89.2",
     "swiper": "^11.2.10"
   },
