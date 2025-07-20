@@ -6,18 +6,34 @@
     position:relative;
 
     &__scroll {
-        position: absolute;
-        left:200px;
-        height:100%;
-        content:'';
+        width: 8px;
         background:$plo-gray;
-        color:$plo-purple;
+        color:#616161;
+        overflow:hidden;
+        z-index: 10;
+        height: 100%;
+        margin-top:3px;
+        position: relative; 
+        
+        &--dot {
+            width:14px;
+            height: 14px;
+            background-color: $plo-white;
+            position: absolute;
+            z-index: 9999;
+        }
+
+        &--highlight {
+            background-color: $plo-purple;
+            position:relative;
+            height: auto;
+        }
     }
 
     &__content {
         display: flex;
         flex-direction: column;
-        gap:30px;
+
 
         &__project {
             display: flex;
@@ -31,7 +47,14 @@
                 font-weight:bold;
                 position: sticky;
                 top: 20px;
-              }
+            }
+
+            &__description {
+                display: flex;
+                flex-direction: column;
+                gap:28px;
+                padding-bottom:100px;
+            }
         }
     }
 }
