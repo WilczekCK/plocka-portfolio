@@ -38,17 +38,17 @@ const SectionContact = () => {
             <Form>
               <label htmlFor="name">
                 Imię
-                <Field as="input" name="name" disabled={isSubmitting}/>
+                <Field as="input" id="name" name="name" disabled={isSubmitting}/>
               </label>
 
               <label htmlFor="email">
                 E-mail
-                <Field type="email" name="email" disabled={isSubmitting}/>
+                <Field type="email" id="email" name="email" disabled={isSubmitting}/>
               </label>
 
               <label htmlFor="message">
                 Treść wiadomości
-                <Field as="textarea" name="message" disabled={isSubmitting}/>
+                <Field as="textarea" id="message" name="message" disabled={isSubmitting}/>
               </label>
               
               <button type="submit" className="btn btn--purple" disabled={isSubmitting}>

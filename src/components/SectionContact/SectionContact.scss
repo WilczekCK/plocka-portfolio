@@ -55,14 +55,33 @@
                     resize:none;
                     min-width:461px;
                     border-radius:12px;
+                    outline-color: $plo-purple;
+                    color: $plo-white;
+                    padding-left: 15px;
+                    box-sizing: border-box;
+                    font-size:20px;
                 }
 
                 input {
                     height:48px;
+                    transition: $plo-text-transition;
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: 0 0 0 2px $plo-purple;
+                    }
                 }
 
                 textarea {
                     min-height: 142px;
+                    transition: $plo-text-transition;
+                    padding-top:15px;
+                    padding-bottom:15px;
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: 0 0 0 2px $plo-purple;
+                    }
                 }
             }
 
