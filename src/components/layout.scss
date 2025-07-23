@@ -51,6 +51,7 @@ main {
     background-color: $plo-gray;
     color:$plo-white;
     cursor: pointer;
+    border:unset;
 
     @media (max-width: $plo-mobile) {
         width: 100%;   
