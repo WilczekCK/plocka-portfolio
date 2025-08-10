@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     gap:100px;
-    margin-top:100px;
+    margin-top:50px;
     margin-bottom:100px;
 
     @media (max-width: $plo-tablet) {
@@ -15,7 +15,7 @@
     }
 
     @media (max-width: $plo-mobile) {
-        margin-top:50px;
+        margin-top:25px;
     }
 
     &__left {
