@@ -1,6 +1,7 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Field, Form, Formik, FormikProps } from "formik";
+import axios from "axios";
 import PhoneIcon from "../../assets/icons/phone.svg";
 
 import "./SectionContact.scss";
@@ -28,10 +29,16 @@ const SectionContact = () => {
             message: "",
           }}
           onSubmit={(values, actions) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
+            axios.post(`https://formspree.io/f/${process.env.GATSBY_FORMSPREE_KEY}`, values)
+            .then(function (response) {
+              alert("Wiadomość została wysłana! Dziękujemy za kontakt.");
+            })
+            .catch(function (error) {
+              alert(error);
+            })
+            .finally(function (){
               actions.setSubmitting(false);
-            }, 1000);
+            });
           }}
         >
           {({ isSubmitting }) => (
