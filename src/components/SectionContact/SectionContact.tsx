@@ -1,12 +1,15 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Field, Form, Formik, FormikProps } from "formik";
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
 import axios from "axios";
 import PhoneIcon from "../../assets/icons/phone.svg";
 
 import "./SectionContact.scss";
 
 const SectionContact = () => {
+  const [useSent, setUseSent] = React.useState(false);
+
   return (
     <div className={"section__contact"}>
       <div className={"section__contact__left"}>
@@ -31,7 +34,7 @@ const SectionContact = () => {
           onSubmit={(values, actions) => {
             axios.post(`https://formspree.io/f/${process.env.GATSBY_FORMSPREE_KEY}`, values)
             .then(function (response) {
-              alert("Wiadomość została wysłana! Dziękujemy za kontakt.");
+              setUseSent(true);
             })
             .catch(function (error) {
               alert(error);
@@ -42,26 +45,44 @@ const SectionContact = () => {
           }}
         >
           {({ isSubmitting }) => (
-            <Form>
-              <label htmlFor="name">
-                Imię
-                <Field as="input" id="name" name="name" disabled={isSubmitting}/>
-              </label>
+            useSent ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                    duration: 0.6,
+                    type: "spring"
+                }}
+              >
+              <p style={{paddingBottom: '20px'}}>
+                Formularz został wysłany! Dziękuję za kontakt.
+              </p>
+              <a className={"btn btn--purple"}>
+                  WRÓC NA POCZĄTEK STRONY
+              </a>
+            </motion.div>
+            ) : (
+              <Form>
+                <label htmlFor="name">
+                  Imię
+                  <Field as="input" id="name" name="name" disabled={isSubmitting}/>
+                </label>
 
-              <label htmlFor="email">
-                E-mail
-                <Field type="email" id="email" name="email" disabled={isSubmitting}/>
-              </label>
+                <label htmlFor="email">
+                  E-mail
+                  <Field type="email" id="email" name="email" disabled={isSubmitting}/>
+                </label>
 
-              <label htmlFor="message">
-                Treść wiadomości
-                <Field as="textarea" id="message" name="message" disabled={isSubmitting}/>
-              </label>
-              
-              <button type="submit" className="btn btn--purple" disabled={isSubmitting}>
-                {isSubmitting ? "Wysyłanie..." : "Wyślij"}
-              </button>
-            </Form>
+                <label htmlFor="message">
+                  Treść wiadomości
+                  <Field as="textarea" id="message" name="message" disabled={isSubmitting}/>
+                </label>
+                
+                <button type="submit" className="btn btn--purple" disabled={isSubmitting}>
+                  {isSubmitting ? "Wysyłanie..." : "Wyślij"}
+                </button>
+              </Form>
+            )
           )}
         </Formik>
       </div>
