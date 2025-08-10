@@ -1,12 +1,27 @@
 @import "../variables.scss";
 
+#kontakt .section__wrapper--children {
+    background-color:$plo-container-dark-bg;
+    border-radius:18px;
+    margin-bottom:40px;
+
+    @media (max-width: $plo-tablet) {
+        margin-bottom:30px;
+    }
+
+    @media (max-width: $plo-mobile) {
+        margin-bottom:15px;
+    }
+}
+
 .section__contact {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap:100px;
     margin-top:50px;
-    margin-bottom:100px;
+    margin-bottom:50px;
+
 
     @media (max-width: $plo-tablet) {
         flex-direction: column;

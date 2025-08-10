@@ -23,6 +23,7 @@ import PortfolioKikeco from "../components/SectionPortfolio/Portfolios/Portfolio
 import PortfolioHss from "../components/SectionPortfolio/Portfolios/PortfolioHss";
 import PortfolioMobile from "../components/SectionPortfolio/Portfolios/PortfolioMobile";
 import SectionContact from "../components/SectionContact/SectionContact";
+import Footer from "../components/Footer/Footer";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -136,6 +137,8 @@ const IndexPage: React.FC<PageProps> = () => {
           </Section>
         </div>
       </main>
+
+      <Footer />
     </>
   )
 }
