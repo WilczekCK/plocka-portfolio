@@ -4,6 +4,13 @@ html {
     background: $plo-black;
     color: $plo-white;
     font-family: "Goldman", sans-serif;
+    scroll-behavior: smooth;
+}
+
+[id] { scroll-margin-top: 80px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 
 main, footer {

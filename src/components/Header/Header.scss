@@ -1,8 +1,30 @@
 @import "../variables.scss";
 
+
+.header--sticky{
+    height:45px;
+    
+    .header--wrapper {
+        height:45px;
+        padding:0px 15px;
+        
+        .btn {
+            font-size:16px;
+            height:35px;
+            padding:0px 10px;
+        }
+    }
+}
+
 header{
     width:100%;
     background:#1B1B1B;
+    position:sticky !important;
+    top:0px;
+    z-index:9999;
+    height:82px;
+
+    transition:  height 0.2s cubic-bezier(0.42, 0, 0.58, 1);
 
     // Desktop
     .header--wrapper {
@@ -11,6 +33,9 @@ header{
         justify-content: center;
         align-items:center;
         max-width:1300px;
+
+
+        transition:  height 0.2s cubic-bezier(0.42, 0, 0.58, 1);
 
         margin:0 auto;
         padding:0px 45px;
@@ -124,7 +149,7 @@ header{
 
             .header__menu {
                 position:absolute;
-                top:80px;
+                top:40px;
                 width: 100%;
 
                 background: $plo-container-bg;

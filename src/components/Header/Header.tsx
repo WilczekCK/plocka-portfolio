@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.scss";
 import HamburgerIcon from '../../assets/icons/hamburger.svg';
+
+
 
 interface HeaderProps {
   highlighted?: "hero" | "o-mnie" | "oferta" | "portfolio" | "kontakt" | "blog";
@@ -15,8 +17,28 @@ const Header: React.FC<HeaderProps> = () => {
   const [highlighted, setHighlighted] = useState<HeaderProps["highlighted"]>("hero");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const vis = entries.find((e) => e.isIntersecting);
+        if (vis) {
+          setHighlighted(vis.target.id);
+        } else {
+          setHighlighted("hero");
+        }
+      },
+      { rootMargin: "-40% 0px -50% 0px" }
+    );
+   
+    ["hero", "o-mnie", "oferta", "portfolio","kontakt","blog"].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) obs.observe(el);
+    });
+    return () => obs.disconnect();
+  }, []);
+
   return (
-    <header>
+    <header className={`${highlighted != 'hero' ? "header--sticky" : ""}`}>
       <div className={`header--wrapper ${isMobileMenuOpen ? "header__hamburger--active" : ""}`}>
         <div className={`header__hamburger ${isMobileMenuOpen ? "header__hamburger--active" : ""}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             <HamburgerIcon />
@@ -28,9 +50,19 @@ const Header: React.FC<HeaderProps> = () => {
                 ['o-mnie', 'oferta', 'portfolio', 'kontakt'].map((item) => (
                   <li key={item}>
                     <a
-                      href={`#${item}`}
-                      onClick={() => setHighlighted(item as HeaderProps["highlighted"])}
                       className={highlighted === item ? "active" : ""}
+                      href={`#${item}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setHighlighted(item as HeaderProps["highlighted"])
+
+                        const el = document.getElementById(item);
+                        if (!el) return;
+
+                        const y = el.getBoundingClientRect().top + window.pageYOffset;
+                        window.scrollTo({ top: y, behavior: "smooth" });
+                        history.replaceState(null, "", `#${item}`);
+                      } }
                     >
                       {
                         item.toUpperCase().replace(/-/g, " ")
