@@ -34,7 +34,8 @@
     "react-dom": "^18.2.0",
     "react-spring": "^10.0.1",
     "sass": "^1.89.2",
-    "swiper": "^11.2.10"
+    "swiper": "^11.2.10",
+    "zustand": "^5.0.7"
   },
   "devDependencies": {
     "@types/node": "^20.11.19",
