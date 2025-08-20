@@ -12,19 +12,42 @@ import SocialIcon from '../../assets/icons/social.svg';
 import UiIcon from '../../assets/icons/ui.svg';
 import PhoneIcon from '../../assets/icons/phone-2.svg';
 
-const useMediaQuery = () => {
-  const [desktopMedium, setDesktopMedium] = React.useState(window.matchMedia("(min-width: 768px)").matches);
+type Bp = {
+  desktopMedium: boolean;
+}
+
+const DESKTOP_MEDIUM = "(min-width: 768px)";
+
+const useMediaQuery = () : Bp => {
+  const [desktopMedium, setDesktopMedium] = React.useState(() => {
+    if (typeof window === "undefined") {
+      return false;
+    }
+
+    return window.matchMedia(DESKTOP_MEDIUM).matches;
+  });
 
   React.useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
-    const handleChange = (e) => {
-      setDesktopMedium(e.matches);
-    };
+    if (typeof window === "undefined") return;
 
-    mediaQuery.addEventListener("change", handleChange);
+    const mediaQuery = window.matchMedia(DESKTOP_MEDIUM);
+    const handleChange = (e: MediaQueryListEvent) => ;setDesktopMedium(e.matches);
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", handleChange);
+    } else {
+      (mediaQuery as any).addListener(handleChange); // For older browsers
+    }
+
+    setDesktopMedium(mediaQuery.matches);
+
     return () => {
-      mediaQuery.removeEventListener("change", handleChange);
-    };
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener("change", handleChange);
+      } else {
+        (mediaQuery as any).removeListener(handleChange); // For older browsers
+      }
+    }
   }, []);
 
   return { desktopMedium };

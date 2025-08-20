@@ -39,7 +39,7 @@
             z-index: 9999;
             border-radius:14px;
             left:-6px;
-        }
+        }   
 
         &--highlight {
             background-color: $plo-purple;
@@ -58,6 +58,8 @@
             gap:35px;
             align-items: flex-start;
             position: sticky;
+
+
 
             @media (min-width: 0px) and (max-width: $plo-mobile) {
                 gap:0px;

@@ -13,7 +13,9 @@ interface HeaderProps {
   >;
 }
 
-const Header: React.FC<HeaderProps> = () => {
+const Header = () => {
+  if (typeof window === "undefined") return null; 
+
   const [highlighted, setHighlighted] = useState<HeaderProps["highlighted"]>("hero");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
