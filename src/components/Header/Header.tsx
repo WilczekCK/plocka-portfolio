@@ -58,7 +58,8 @@ const Header: React.FC<HeaderProps> = () => {
 
                         const el = document.getElementById(item);
                         if (!el) return;
-
+                        if (typeof window === "undefined") return null
+                        
                         const y = el.getBoundingClientRect().top + window.pageYOffset;
                         window.scrollTo({ top: y, behavior: "smooth" });
                         history.replaceState(null, "", `#${item}`);
