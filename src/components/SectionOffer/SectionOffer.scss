@@ -61,6 +61,7 @@
 
     @media (max-width:1400px) {
       height:100%;
+      padding:0px;
     }
   }
 
@@ -103,7 +104,7 @@
     border:1px solid #525252;
 
     @media (max-width:1400px) {
-      width:calc(50% - 25px) !important;
+      width:calc(50% - 12px) !important;
     }
   }
   
@@ -242,14 +243,8 @@
     @media (max-width:1400px) {
       display: flex !important;
       opacity:1 !important;
-    }
-    
-    @media (max-width: 1420px) {
-      width: 30rem;
-    }
-
-    @media (max-width: 1380px) {
-      width: 28rem;
+      width: auto !important;
+      padding-right:20px;
     }
   }
 

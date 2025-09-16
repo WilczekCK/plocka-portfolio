@@ -50,7 +50,6 @@ const useMediaQuery = (): Bp => {
       (mediaQuery as any).addListener(handleChange);
     }
 
-    // Sync na wypadek gdyby stan początkowy był nieaktualny
     setDesktopMedium(mediaQuery.matches);
 
     return () => {
@@ -119,10 +118,10 @@ const PanelItem: React.FC<PanelItemProps> = ({
           <div className="panel-inner">
             <div className="panel-header"></div>
 
-            <div className="panel-description">
+            <p className="panel-description">
               {panel.image}
-              {panel.description && <p>{panel.description}</p>}
-            </div>
+              <p>{panel.description}</p>
+            </p>
           </div>
         </animated.div>
       )}
@@ -241,7 +240,7 @@ const SectionOffer: React.FC = () => {
   ];
 
   const handleMouseEnter = (id: number) => {
-    if (id === 6) return; // CTA nie rozwijamy
+    if (id === 6) return;
     setExpandedPanel(id);
   };
 
