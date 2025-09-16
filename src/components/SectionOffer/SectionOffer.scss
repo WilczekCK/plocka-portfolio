@@ -319,6 +319,12 @@
       max-width:325px;
       height:min-content;
       max-height:290px;
+
+      @media (max-width:1000px) {
+        margin:0 auto;
+        text-align: center;
+        width:100%;
+      }
     }
   }
   
