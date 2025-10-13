@@ -15,21 +15,19 @@ const SectionAbout = () => {
   return (
     <>
       <p>
-        Na co dzień pracuję jako grafik w agencji e-commerce, gdzie zajmuję się
-        przygotowaniem banerów i materiałów promocyjnych dla różnych branż.
-        Dzięki temu <b>wyczuwam potrzeby wizualne klienta i potrafię błyskawicznie
-        tworzyć nowe koncepcje.</b> Równolegle rozwijam się w kierunku UX/UI,
-        zrealizowałam już wiele projektów stron i aplikacji w Figmie, co
-        potwierdzają liczne realizacje dostępne w moim portfolio.
+        Pracuję, jako grafik w agencji e-commerce, gdzie zajmuje się przygotowywaniem materiałów reklamowych dla różnych branż. 
+        Praca w tak dynamicznym środowisku nauczyła mnie wyczucia potrzeb różnych klientów i szybkiego tworzenia nowych koncepcji.
       </p>
 
       <p>
-        Mam również doświadczenie w pracy z WordPressem oraz w projektowaniu identyfikacji
-        wizualnej, grafik do social mediów i materiałów DTP. Brałam udział w
-        hackathonach, co udoskonaliło moje umiejętności pracy w zespole,
-        komunikacji z programistami i szybkiego działania. Projekty, które
-        tworzę, są dopracowane wizualnie, ale też intuicyjne w użytkowaniu. Nie
-        stoję w miejscu - stale inwestuję czas w naukę.
+        Kilkuletnie doświadczenie w pracy grafika nauczyło mnie, że bez dobrego UX i UI nie ma dobrego projektu. 
+        Kolory, dobrze dobrane fonty i funkcjonalność muszą iść w parze, dobra strona czy aplikacja to nie tylko estetyka, ale też intuicyjność i wygoda.</p>
+
+      <p>
+        Mogę stworzyć dla Ciebie zarówno materiały do druku, jak i projekty cyfrowe.
+        Jeżeli potrzebujesz logo, wizytówki, grafik do social mediów, banerów reklamowych na stronę WWW czy projektu całej witryny, skontaktuj się ze mną. 
+        Razem stworzymy unikalną identyfikację wizualną dla Twojej firmy. 
+        Poza grafiką mam doświadczenie również z WordPressem, dzięki braniu udziału w hackathonach udoskonaliłam swoje umiejętności komunikacji z programistami, pracy w zespole i działania pod presją czasu — możesz to wykorzystać.
       </p>
 
       <div className={"certificates__container"}>
@@ -106,14 +104,11 @@ const SectionAbout = () => {
       </div>
 
       <p>
-        Każdy projekt traktuję jako nową szansę na rozwój i eksperyment.
-        Interesuję się psychologią oraz designem skupionym na użytkowniku - to
-        pozwala mi tworzyć interfejsy, które nie tylko wyglądają dobrze, ale też
-        odpowiadają na realne potrzeby odbiorcy. Umiem pracować pod presją czasu
-        i odnajduję się tam, gdzie potrzeba szybkich, kreatywnych decyzji. W
-        wolnych chwilach szkicuję i zgłębiam tematy związane z psychologią i
-        typologią osobowości (MBTI). To pomaga mi lepiej rozumieć potrzeby
-        użytkowników i tworzyć projekty z większą empatią.
+        Każdy projekt to nowa lekcja i szansa rozwoju. 
+        Interesuję się projektowaniem, które skupia się na użytkowniku — w końcu to on będzie z niego korzystał. 
+        Dlatego interfejs musi być tak samo estetyczny, jak prosty i wygodny w użyciu. 
+        W wolnych chwilach szkicuję i zgłębiam tematy związane z psychologią i typologią osobowości (MBTI).
+        To pomaga mi lepiej rozumieć potrzeby użytkowników i tworzyć projekty z większą empatią. 
       </p>
     </>
   );

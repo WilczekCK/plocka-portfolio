@@ -137,8 +137,7 @@ const SectionOffer: React.FC = () => {
     {
       id: 0,
       title: "Projektowanie stron (UI)",
-      description:
-        "Nowoczesne layouty stron internetowych, estetyczne i funkcjonalne. Dopasowane pod potrzeby użytkownika i marki.",
+      description: "Estetyczne i funkcjonalne layouty stron internetowych, które łączą potrzeby marki i wygodę użytkowników.",
       icon: <UiIcon />,
       image: (
         <StaticImage
@@ -153,8 +152,7 @@ const SectionOffer: React.FC = () => {
     {
       id: 1,
       title: "Identyfikacja wizualna",
-      description:
-        "Logo, kolory, typografia - zaprojektuję spójny wizerunek marki, dopasowany do jej charakteru i odbiorców.",
+      description: "Kolory firmowe, logo, typografię — zaprojektuję spójny wizerunek marki, dopasowany do jej specyfiki.",
       icon: <IdentificationIcon />,
       image: (
         <StaticImage
@@ -169,8 +167,7 @@ const SectionOffer: React.FC = () => {
     {
       id: 2,
       title: "Materiały marketingowe",
-      description:
-        "Banery, ulotki, projekty reklamowe do internetu i druku. Tworzę czytelne i skuteczne materiały promocyjne.",
+      description: "Materiały reklamowe do druku oraz do Internetu — tworzę czytelne projekty, które pracują na sukces firmy.",
       icon: <MarketingIcon />,
       image: (
         <StaticImage
@@ -185,8 +182,7 @@ const SectionOffer: React.FC = () => {
     {
       id: 3,
       title: "Grafika do Social Media",
-      description:
-        "Estetyczne grafiki do social mediów - atrakcyjne wizualnie i dopasowane do odbiorcy.",
+      description: "Atrakcyjne grafiki do mediów społecznościowych dopasowane do odbiorców i zgodne z wymaganiami różnych serwisów.",
       icon: <SocialIcon />,
       image: (
         <StaticImage
@@ -201,8 +197,7 @@ const SectionOffer: React.FC = () => {
     {
       id: 4,
       title: "Projekty DTP pod druk",
-      description:
-        "Ulotki, wizytówki, katalogi, plakaty - przygotowane zgodnie z zasadami druku i dbałością o każdy szczegół.",
+      description: "Ulotki, wizytówki, plakaty reklamowe i wiele więcej zaprojektuje dla Ciebie dopracowane materiały zgodne z zasadami druku.",
       icon: <DtpIcon />,
       image: (
         <StaticImage
@@ -217,8 +212,7 @@ const SectionOffer: React.FC = () => {
     {
       id: 5,
       title: "Interfejsy aplikacji",
-      description:
-        "Intuicyjne i nowoczesne interfejsy - od koncepcji po gotowy projekt w Figmie, z myślą o użytkownikach.",
+      description: "Nowoczesne i intuicyjne interfejsy — przygotuje dla Ciebie wszystko od koncepcji po gotowy projekt w Figmie.",
       icon: <AppsIcon />,
       image: (
         <StaticImage

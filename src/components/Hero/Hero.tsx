@@ -10,8 +10,8 @@ const Hero: React.FC<BodyProps> = () => {
         <h1 className={"hero__container__left--header"}>Natalia Płocka</h1>
 
         <div className={"hero__container__left--description"}>
-          Z pasją tworzę unikalne <b>projekty graficzne</b>, łącząc kreatywność z doświadczeniem i estetycznym wyczuciem.
-          Każdy projekt traktuję indywidualnie, dbając o najwyższą jakość i oryginalność wykonania dla każdego projektu.
+          Tworzę projekty graficzne, dbając o każdy szczegół i wysoką jakość wykonania.
+          W mojej pracy łączę kreatywność, wyczucie estetyki i doświadczenie, co pozwala mi tworzyć oryginalne koncepcje dla firm z różnych branż.
         </div>
 
         <div className={"hero__container__left__actions"}>
