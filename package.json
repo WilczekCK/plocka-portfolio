@@ -16,6 +16,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@fontsource/goldman": "^5.2.8",
     "formik": "^2.4.6",
     "gatsby": "^5.14.1",
     "gatsby-plugin-google-gtag": "^5.14.0",
