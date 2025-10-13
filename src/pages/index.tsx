@@ -1,5 +1,6 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
+import { ScrollProvider } from "../context/ScrollContext";
 
 import "../components/layout.scss"
 import 'normalize.css';
@@ -27,7 +28,7 @@ import Footer from "../components/Footer/Footer";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <>
+    <ScrollProvider>
       <Header />
       <main>
         <div className="main__wrapper">
@@ -139,7 +140,7 @@ const IndexPage: React.FC<PageProps> = () => {
       </main>
 
       <Footer />
-    </>
+    </ScrollProvider>
   )
 }
 

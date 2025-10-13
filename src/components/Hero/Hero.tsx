@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ScrollContext } from "../../context/ScrollContext";
 import "./Hero.scss";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Hero: React.FC<BodyProps> = () => {
+  const {highlighted, scrollFunction, setHighlighted} = useContext(ScrollContext);
+
   return (
     <div className={"hero__container"}>
       <div className={"hero__container__left"}>
@@ -15,11 +18,11 @@ const Hero: React.FC<BodyProps> = () => {
         </div>
 
         <div className={"hero__container__left__actions"}>
-          <a className={"btn btn--purple"}>
+          <a className={"btn btn--purple"} onClick={() => [setHighlighted('portfolio'), scrollFunction('portfolio')]}>
             ZOBACZ PORTFOLIO
           </a>
 
-          <a className={"btn btn--gray"}>
+          <a className={"btn btn--gray"} onClick={() => [setHighlighted('kontakt'), scrollFunction('kontakt')]}>
             SKONTAKTUJ SIĘ ZE MNĄ
           </a>
         </div>

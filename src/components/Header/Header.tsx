@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Header.scss";
 import HamburgerIcon from '../../assets/icons/hamburger.svg';
-
+import useScrollHook from "../../hooks/useScrollHook";
+import { ScrollContext } from "../../context/ScrollContext";
 
 
 interface HeaderProps {
@@ -15,29 +16,8 @@ interface HeaderProps {
 
 const Header = () => {
   if (typeof window === "undefined") return null; 
-
-  const [highlighted, setHighlighted] = useState<HeaderProps["highlighted"]>("hero");
+  const {highlighted, scrollFunction, setHighlighted} = useContext(ScrollContext);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      (entries) => {
-        const vis = entries.find((e) => e.isIntersecting);
-        if (vis) {
-          setHighlighted(vis.target.id);
-        } else {
-          setHighlighted("hero");
-        }
-      },
-      { rootMargin: "-40% 0px -50% 0px" }
-    );
-   
-    ["hero", "o-mnie", "oferta", "portfolio","kontakt","blog"].forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) obs.observe(el);
-    });
-    return () => obs.disconnect();
-  }, []);
 
   return (
     <header className={`${highlighted != 'hero' ? "header--sticky" : ""}`}>
@@ -55,16 +35,8 @@ const Header = () => {
                       className={highlighted === item ? "active" : ""}
                       href={`#${item}`}
                       onClick={(e) => {
-                        e.preventDefault();
-                        setHighlighted(item as HeaderProps["highlighted"])
-
-                        const el = document.getElementById(item);
-                        if (!el) return;
-                        if (typeof window === "undefined") return null
-                        
-                        const y = el.getBoundingClientRect().top + window.pageYOffset;
-                        window.scrollTo({ top: y, behavior: "smooth" });
-                        history.replaceState(null, "", `#${item}`);
+                        scrollFunction(item);
+                        setHighlighted(item);
                       } }
                     >
                       {

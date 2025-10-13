@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./SectionOffer.scss";
-
+import { ScrollContext } from "../../context/ScrollContext";
 import { StaticImage } from "gatsby-plugin-image";
 import { useSpring, animated } from "@react-spring/web";
 
@@ -92,6 +92,8 @@ const PanelItem: React.FC<PanelItemProps> = ({
     config: { duration: 600 },
   });
 
+  const {highlighted, scrollFunction, setHighlighted} = React.useContext(ScrollContext);
+
   return (
     <animated.div
       className={`panel ${isSelected ? "panel-expanded" : "panel-collapsed"} ${
@@ -99,6 +101,13 @@ const PanelItem: React.FC<PanelItemProps> = ({
       } ${panel.gradientClass ?? ""}`}
       style={{ width: widthSpring.width.to((w) => `${w}px`) }}
       onMouseEnter={onMouseEnter}
+      onClick={() => {
+        if (panel.cta) {
+          setHighlighted('kontakt');
+          scrollFunction('kontakt');
+        }
+      }
+    }
     >
       <div
         className={`panel-shine ${isSelected ? "shine-visible" : "shine-hidden"}`}
@@ -118,10 +127,10 @@ const PanelItem: React.FC<PanelItemProps> = ({
           <div className="panel-inner">
             <div className="panel-header"></div>
 
-            <p className="panel-description">
+            <div className="panel-description">
               {panel.image}
               <p>{panel.description}</p>
-            </p>
+            </div>
           </div>
         </animated.div>
       )}
