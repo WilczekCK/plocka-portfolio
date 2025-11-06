@@ -124,8 +124,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     heading={<>Projekty aplikacji mobilnych</>}
                     subheading="UI/UX dla aplikacji mobilnych – prognoza pogody i zamówienia online"
                     children={<PortfolioMobile />}
-                    linkProto={"#"}
-                    linkProto2={"#"}
+                    linkBehance={"https://www.behance.net/gallery/187729141/Two-application-prototypes-in-Figma"}
                   />
                 </div>
               </div>

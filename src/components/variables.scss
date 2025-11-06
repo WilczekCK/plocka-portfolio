@@ -21,3 +21,8 @@ color 0.3s cubic-bezier(0.42, 0, 0.58, 1),
   background 0.4s cubic-bezier(0.42, 0, 0.58, 1),
   box-shadow 0.2s cubic-bezier(0.42, 0, 0.58, 1)
   ;
+
+
+$fade-duration: 900ms !default;
+$fade-ease: cubic-bezier(0.22, 1, 0.36, 1) !default; // easeOutExpo-ish
+$fade-distance: 16px !default;

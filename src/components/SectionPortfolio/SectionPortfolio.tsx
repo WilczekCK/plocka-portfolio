@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform, useMotionValue, useSpring } from "fram
 
 import "./SectionPortfolio.scss";
 
-const SectionPortfolio = ({heading, subheading, link, children}) => {
+const SectionPortfolio = ({heading, subheading, link, linkBehance, children}) => {
   const sectionRef = React.useRef<HTMLDivElement>(null);
   
   const { scrollYProgress } = useScroll({ target: sectionRef,});
@@ -23,6 +23,7 @@ const SectionPortfolio = ({heading, subheading, link, children}) => {
         <span>{heading}</span>
         <p>{subheading}</p>
 
+        {linkBehance && (<><a href={linkBehance} target="_blank" className="btn" style={{width:"max-content"}}>wyświetl na Behance</a></>)} 
         {link && (<><a href={link} target="_blank" className="btn" style={{width:"max-content"}}>wyświetl stronę</a></>)} 
       </div>
 
@@ -48,6 +49,7 @@ const SectionPortfolio = ({heading, subheading, link, children}) => {
           <span>{heading}</span>
           <p>{subheading}</p>
 
+          {linkBehance && (<><a href={linkBehance} target="_blank" className="btn" style={{width:"max-content"}}>wyświetl na Behance</a></>)} 
           {link && (<><a href={link} target="_blank" className="btn" style={{width:"max-content"}}>wyświetl stronę</a></>)} 
         </div>
 

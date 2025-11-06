@@ -20,15 +20,27 @@
         min-height: 500px;
     }
 
-    @media (max-width: $plo-tablet) {
+    @media (max-width: 1318px ) {
         flex-direction: column;
         padding: 50px 55px 0px;
         gap:50px;
+        align-items:center;
     }
 
     @media (max-width: $plo-mobile) {
         padding:30px;
         gap:70px;
+    }
+
+
+    &__left,
+    &__right {
+        @media (max-width: 1318px) {
+            max-width: 100% !important;
+            flex-grow: unset;
+
+
+        }
     }
 
     &__left {
@@ -76,7 +88,7 @@
 
 
             @media (max-width: $plo-mobile) {
-                font-size:28px;
+                font-size:36px;
             }
         }
 
@@ -90,7 +102,7 @@
             }
 
             @media (max-width: $plo-tablet) {
-                font-size:28px;
+                font-size:36px;
             }
         }
 
@@ -98,16 +110,21 @@
             color:$plo-white;
             font-weight: 500;
             font-size:20px;
-            line-height: 28px;
+            line-height: 30px;
 
             @media (max-width: 1336px) and (min-width: $plo-tablet) {
-                font-size:calc(20px - 0.35vw);
-                line-height:calc(28px - 0.35vw);
+                font-size:calc(28px - 0.35vw);
                 margin-top:-15px
             }
 
             @media (max-width: $plo-tablet) {
-                font-size:16px;
+                font-size:20px;
+                line-height: 30px;
+            }
+
+            @media (max-width: $plo-tablet) {
+                font-size:20px;
+                line-height: 30px;
             }
         }
 
@@ -116,6 +133,10 @@
             flex-direction: row;
             flex-wrap:wrap;
             gap:20px;
+
+            @media (max-width: $plo-tablet) {
+                margin-top:15px;
+            }
         }
     }
 
@@ -126,6 +147,10 @@
         flex-grow: 1;
         
         max-width:565px;
+
+        @media (max-width: 1318px) {
+            max-width:565px !important;
+        }
 
         @media (max-width: 1336px) and (min-width: $plo-tablet) {
             max-width:calc(565px - 3vw);
