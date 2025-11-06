@@ -138,6 +138,29 @@
       }
     }
   }
+
+  
+
+  .panel-expanded,
+  .panel-collapsed {
+    @media (max-width:1400px) {
+        height: auto !important;
+        min-height: 420px !important;
+        padding:25px 0px !important;
+
+
+        // &:nth-child(1),
+        // &:nth-child(2) {
+        //   min-height: 400px !important;
+        // }
+    }
+
+    @media (max-width:900px) {
+      height: auto !important;
+      min-height: 380px !important;
+      padding-bottom:20px !important;
+    }
+  }
   
   .panel-expanded {
     background-color: #171717;
@@ -147,12 +170,11 @@
       height:500px;
 
       &:first-of-type {
-        height:530px;
+        height: auto;
+        min-height: 400px;
+        padding-bottom:20px;
       }
 
-      &:nth-child(4) {
-        height:480px;
-      }
     }
   }
   
@@ -263,6 +285,10 @@
     inset: 0;
     width: 32rem;
     pointer-events: none;
+
+    @media (max-width:1400px) {
+      position: relative;
+    }
 
     @media (max-width:1400px) {
       display: flex !important;

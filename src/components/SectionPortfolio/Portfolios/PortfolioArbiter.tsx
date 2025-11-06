@@ -10,6 +10,7 @@ const PortfolioPrefa = () => {
           loading="lazy"
           placeholder="blurred"
           layout="constrained"
+          style={{width: '80%'}}
         />
 
         Stworzyłam eleganckie logo oraz estetyczną, przejrzystą stronę internetową, której design oddaje charakter marki i podkreśla jej wyrafinowany styl.
@@ -29,14 +30,6 @@ const PortfolioPrefa = () => {
           placeholder="blurred"
           layout="constrained"
         />
-
-        <p>Zaprojektowałam sklep internetowy dla Moriar Tables, specjalizującej się w produkcji stołów do gier planszowych, bitewnych i RPG. </p>
-        
-        <p>
-          Strona oferuje intuicyjną nawigację z podziałem na kategorie: stoły, akcesoria, dodatki meblowe. 
-          Zintegrowany konfigurator umożliwia klientom personalizację stołu według własnych preferencji.
-          Projekt skupia się na czytelnej prezentacji produktów, podkreślając ich funkcjonalność i estetykę
-        </p>
     </>
   );
 };
