@@ -40,8 +40,13 @@ const config: GatsbyConfig = {
     resolve: "gatsby-plugin-react-svg",
     options: {
       rule: {
-        include: /src\/assets/
-      }
+        include: /src\/assets\/icons/
+      },
+      svgo: true,
+      svgrConfig: {
+        jsxRuntime: 'automatic',
+        titleProp: false,
+      },
     }
   }]
 };

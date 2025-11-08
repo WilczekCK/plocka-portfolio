@@ -29,12 +29,21 @@ type Panel = {
 const DESKTOP_MEDIUM = "(min-width: 768px)";
 
 const useMediaQuery = (): Bp => {
-  const getInitial = () =>
-    typeof window !== "undefined"
-      ? window.matchMedia(DESKTOP_MEDIUM).matches
-      : false;
+  const [desktopMedium, setDesktopMedium] = React.useState<boolean>(false);
 
-  const [desktopMedium, setDesktopMedium] = React.useState<boolean>(getInitial);
+  React.useEffect(() => {
+    const mq = window.matchMedia(DESKTOP_MEDIUM);
+    const update = (e?: MediaQueryListEvent) => setDesktopMedium(e ? e.matches : mq.matches);
+  
+    update();
+    if (mq.addEventListener) mq.addEventListener("change", update);
+    else (mq as any).addListener(update);
+  
+    return () => {
+      if (mq.removeEventListener) mq.removeEventListener("change", update);
+      else (mq as any).removeListener(update);
+    };
+  }, []);
 
   React.useEffect(() => {
     if (typeof window === "undefined") return;

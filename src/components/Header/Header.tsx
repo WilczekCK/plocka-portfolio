@@ -15,7 +15,6 @@ interface HeaderProps {
 }
 
 const Header = () => {
-  if (typeof window === "undefined") return null; 
   const {highlighted, scrollFunction, setHighlighted} = useContext(ScrollContext);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

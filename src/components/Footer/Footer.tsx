@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useStaticQuery } from "gatsby";
 import "./Footer.scss";
 import InstagramIcon from '../../assets/icons/instagram.svg';
 import FacebookIcon from '../../assets/icons/facebook.svg';
@@ -8,7 +7,7 @@ import BehanceIcon from '../../assets/icons/behance.svg';
 
 
 const Footer: React.FC<FooterProps> = () => {
-  const [year, setYear] = React.useState("");
+  const [year, setYear] = React.useState("2025");
   React.useEffect(() => setYear(String(new Date().getFullYear())), []);
 
   return (
