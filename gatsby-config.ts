@@ -5,16 +5,12 @@ require("dotenv").config({
 });
 
 const config: GatsbyConfig = {
-  siteMetadata: {
-    title: `plocka-portfolio`,
-    siteUrl: `https://www.yourdomain.tld`
-  },
   pathPrefix: 'projekt/natalia-portfolio/', // only on glad.vision domain
   graphqlTypegen: true,
   plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": "src/images/favicon.svg"
     }
   }, "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',

@@ -150,7 +150,23 @@ export default IndexPage
 export const Head: HeadFC = () => {
   return (
     <>
-      <title>Natalia Płocka - Portfolio</title>
+        <title>Natalia Płocka - Grafik & UI/UX Designer | Portfolio Glad Vision</title>
+
+        <meta name="description" content="Natalia Płocka - kreatywny grafik z doświadczeniem w e-commerce. Tworzę identyfikacje wizualne, strony internetowe, materiały drukowane i grafiki do social media. Sprawdź portfolio." />
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:title" content="Natalia Płocka - Grafik & UI/UX Designer | Portfolio Glad Vision" />
+        <meta property="og:description" content="Portfolio graficzne Natalii Płockiej - specjalistki od brandingu i projektowania stron. Oryginalne projekty graficzne, branding i UI." />
+        <meta property="og:image" content="https://glad.vision/wp-content/uploads/2023/12/natalia-preview.jpg" />
+        <meta property="og:url" content="https://glad.vision/projekt/natalia-portfolio/" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Natalia Płocka - Grafik & UI/UX Designer" />
+        <meta name="twitter:description" content="Sprawdź portfolio Natalii - branding, projektowanie graficzne i UX/UI." />
+        <meta name="twitter:image" content="https://glad.vision/wp-content/uploads/2023/12/natalia-preview.jpg" />
+
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     </>
   )
 } 
