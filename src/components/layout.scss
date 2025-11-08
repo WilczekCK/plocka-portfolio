@@ -90,3 +90,16 @@ main, footer {
     }
 }
 
+// Fade effect
+.fade {
+    transition: $fade-duration $fade-ease all;
+  
+    &-in {
+      opacity: 1;
+  
+      &-wait {
+        opacity:0
+      }
+    }
+  }
+  
