@@ -18,9 +18,9 @@ const SectionContact = () => {
           coś niezwykłego! ⭐
         </p>
         <p className={"section__contact__left--action"}>
-          <a href="tel:+48500123456">
+          <a href="tel:+884935095">
             <PhoneIcon />
-            500 123 456
+            884 935 095
           </a>
         </p>
       </div>
