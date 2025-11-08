@@ -12,8 +12,6 @@ export const ScrollProvider = ({ children }) => {
                 const visibleEntries = entries.filter((entry) => entry.isIntersecting);
                 const lastVisible = visibleEntries.length > 0 ? visibleEntries[visibleEntries.length - 1] : null;
 
-                console.log(visibleEntries);
-
                 if (lastVisible) {
                     setHighlighted(lastVisible.target.id);
                 } else {

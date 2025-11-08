@@ -5,7 +5,7 @@ require("dotenv").config({
 });
 
 const config: GatsbyConfig = {
-  pathPrefix: 'projekt/natalia-portfolio/', // only on glad.vision domain
+  // pathPrefix: 'projekt/natalia-portfolio/', // only on glad.vision domain
   graphqlTypegen: true,
   plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
@@ -29,7 +29,8 @@ const config: GatsbyConfig = {
   }, {
     resolve: `gatsby-plugin-google-gtag`,
     options: {
-      trackingIds: ['GTM-T772B6P9']
+      trackingIds: ['GTM-T772B6P9'],
+      pluginConfig: { head: false }
     },
   }, {
     resolve: "gatsby-plugin-react-svg",
