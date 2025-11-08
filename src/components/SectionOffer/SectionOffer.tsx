@@ -125,8 +125,6 @@ const PanelItem: React.FC<PanelItemProps> = ({
       {!panel.cta && (
         <animated.div className="panel-expanded-content" style={contentSpring}>
           <div className="panel-inner">
-            <div className="panel-header"></div>
-
             <div className="panel-description">
               {panel.image}
               <p>{panel.description}</p>

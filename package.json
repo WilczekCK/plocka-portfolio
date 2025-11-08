@@ -34,6 +34,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-spring": "^10.0.1",
+    "react-visibility-sensor": "^5.1.1",
     "sass": "^1.89.2",
     "swiper": "^11.2.10",
     "zustand": "^5.0.7"
